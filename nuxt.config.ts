@@ -25,7 +25,10 @@ export default defineNuxtConfig({
     "~/assets/css/notifications.css",
     "bootstrap/dist/css/bootstrap.min.css",
   ],
-  plugins: [],
+  plugins: ["~/plugins/fontawesome.js"],
+  build: {
+    transpile: ["@fortawesome/vue-fontawesome"],
+  },
   modules: ["@bootstrap-vue-next/nuxt"],
   devtools: { enabled: true },
   compatibilityDate: "2024-07-16",

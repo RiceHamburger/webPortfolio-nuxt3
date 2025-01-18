@@ -25,7 +25,7 @@ onMounted(() => {
             </BRow>
         </BContainer>
         <div class="preloader">
-          <fa icon="sun" class="fa-spin" />
+          <fa :icon="['fas', 'sun']" class="fa-spin" />
         </div>
     </section>
     <!--slider-->

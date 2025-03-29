@@ -1,5 +1,6 @@
 
 <script setup>
+const localePath = useLocalePath();
 const isAnimateIn = ref(false);
 const showPreloader = ref(true);
 onMounted(() => {
@@ -37,7 +38,9 @@ onMounted(() => {
             <div class="slide-text">
               <h1>Game + Create = Life</h1>
               <p>{{ $t("in-short") }}</p>
-              <nuxt-link :to="localePath('/aboutme')" class="btn btn-common"
+              <nuxt-link
+                :to="localePath({ name: 'aboutme' })"
+                class="btn btn-common"
                 >ABOUT ME</nuxt-link
               >
             </div>
@@ -69,7 +72,9 @@ onMounted(() => {
               </div>
               <h2>Gallery</h2>
               <p>{{ $t("art-in-short") }}</p>
-              <nuxt-link :to="localePath('/gallery')" class="btn btn-common"
+              <nuxt-link
+                :to="localePath({ name: 'gallery' })"
+                class="btn btn-common"
                 >Link</nuxt-link
               >
             </div>

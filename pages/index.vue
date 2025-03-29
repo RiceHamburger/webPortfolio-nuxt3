@@ -36,8 +36,10 @@ onMounted(() => {
             />
             <div class="slide-text">
               <h1>Game + Create = Life</h1>
-              <p>in-short</p>
-              <nuxt-link class="btn btn-common">ABOUT ME</nuxt-link>
+              <p>{{ $t("in-short") }}</p>
+              <nuxt-link :to="localePath('/aboutme')" class="btn btn-common"
+                >ABOUT ME</nuxt-link
+              >
             </div>
           </div>
         </BRow>
@@ -66,8 +68,10 @@ onMounted(() => {
                 <img src="@/assets/img/home/icon1.png" alt="" />
               </div>
               <h2>Gallery</h2>
-              <p>art-in-short</p>
-              <nuxt-link class="btn btn-common">Link</nuxt-link>
+              <p>{{ $t("art-in-short") }}</p>
+              <nuxt-link :to="localePath('/gallery')" class="btn btn-common"
+                >Link</nuxt-link
+              >
             </div>
           </BCol>
           <BCol
@@ -86,7 +90,7 @@ onMounted(() => {
                 <img src="@/assets/img/home/icon2.png" alt="" />
               </div>
               <h2>Game</h2>
-              <p>program-in-short</p>
+              <p>{{ $t("program-in-short") }}</p>
               <nuxt-link class="btn btn-common">Link</nuxt-link>
             </div>
           </BCol>
@@ -106,7 +110,7 @@ onMounted(() => {
                 <img src="@/assets/img/home/icon3.png" alt="" />
               </div>
               <h2>Web</h2>
-              <p>web-in-short</p>
+              <p>{{ $t("web-in-short") }}</p>
               <nuxt-link class="btn btn-common">Link</nuxt-link>
             </div>
           </BCol>

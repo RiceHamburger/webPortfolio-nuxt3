@@ -23,6 +23,7 @@ a {
   -moz-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
+  text-decoration: none;
 }
 
 a:hover {
@@ -171,7 +172,7 @@ Translation
 }
 
 .pc-translation .container li a:hover,
-.pc-translation .container li a.active {
+.pc-translation .container li a.router-link-active {
   color: #fff;
   background-color: #0099ae;
 }

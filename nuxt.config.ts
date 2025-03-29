@@ -1,3 +1,4 @@
+import path from "path";
 export default defineNuxtConfig({
   app: {
     head: {
@@ -22,7 +23,18 @@ export default defineNuxtConfig({
   build: {
     transpile: ["@fortawesome/vue-fontawesome"],
   },
-  modules: ["@bootstrap-vue-next/nuxt"],
+  modules: ["@bootstrap-vue-next/nuxt", "@nuxtjs/i18n"],
+  i18n: {
+    strategy: "prefix",
+    locales: [
+      { code: "zh-tw", file: "tw.json" },
+      { code: "en", file: "en.json" },
+      { code: "ja", file: "jp.json" },
+    ],
+    defaultLocale: "ja",
+    lazy: true,
+    langDir: path.resolve("./locales"),
+  },
   devtools: { enabled: true },
   compatibilityDate: "2025-03-29",
 });

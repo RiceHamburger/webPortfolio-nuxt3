@@ -1,4 +1,6 @@
-<script lang="ts" setup></script>
+<script setup>
+const switchLocalePath = useSwitchLocalePath();
+</script>
 
 <template>
   <header id="header">
@@ -6,17 +8,17 @@
       <div class="container">
         <ul class="overflow">
           <li>
-            <nuxt-link>
+            <nuxt-link :to="switchLocalePath('zh-tw')">
               <span>ZH-TW</span>
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link>
+            <nuxt-link :to="switchLocalePath('en')">
               <span>EN</span>
             </nuxt-link>
           </li>
           <li>
-            <nuxt-link>
+            <nuxt-link :to="switchLocalePath('ja')">
               <span>JP</span>
             </nuxt-link>
           </li>

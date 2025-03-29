@@ -4,192 +4,194 @@
 
 /*共通*/
 body {
-    background: #fff;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 14px;
-    line-height: 22px;
-    color: #888;
-  }
+  background: #fff;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: #888;
+}
 
-  html {
-    height: 100%;
-  }
+html {
+  height: 100%;
+}
 
+a {
+  color: #267dbc;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
 
-  a{
-    color:#267dbc;
-    -webkit-transition: 300ms;
-    -moz-transition: 300ms;
-    -o-transition: 300ms;
-    transition: 300ms;
-  }
+a:hover {
+  outline: none;
+  text-decoration: none;
+  color: #11d5f8;
+}
 
-  a:hover {
-    outline: none;
-    text-decoration:none;
-    color:#11d5f8;
-  }
+a:focus {
+  outline: none;
+  outline-offset: 0;
+}
 
-  a:focus {
-    outline:none;
-    outline-offset: 0;
-  }
+ul {
+  list-style: none;
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
 
-  ul {
-    list-style: none;
-  }
+h1 {
+  color: #686868;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-  }
+h2 {
+  font-size: 24px;
+  color: #686868;
+}
 
-  h1{
-    color: #686868;
-  }
+h3 {
+  font-size: 18px;
+}
 
-  h2{
-    font-size: 24px;
-    color: #686868;
-  }
+.overflow {
+  overflow: hidden;
+}
 
-  h3{
-    font-size: 18px;
-  }
+.uppercase {
+  text-transform: uppercase;
+}
 
-  .overflow{
-    overflow: hidden;
-  }
+.btn-common {
+  font-size: 14px;
+  color: #0099ae;
+  border: 1px solid #0099ae;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  padding: 10px 25px;
+}
 
-  .uppercase{
-    text-transform: uppercase;
-  }
+#action .col-sm-5 {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  right: 0;
+}
 
-  .btn-common {
-    font-size: 14px;
-    color: #0099ae;
-    border: 1px solid #0099ae;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    padding: 10px 25px;
-  }
+.btn-common:hover,
+.btn-common:focus {
+  outline: none;
+  background: none;
+  box-shadow: none;
+  color: #fff;
+  background-color: #0099ae;
+}
 
-  #action .col-sm-5{
-    position: absolute;
-    top: 0;
-    height: 100%;
-    right: 0;
-  }
+.align-right {
+  text-align: right;
+}
 
+.inline {
+  display: inline-block;
+}
 
-  .btn-common:hover,
-  .btn-common:focus{
-    outline: none;
-    background: none;
-    box-shadow: none;
-    color: #fff;
-    background-color: #0099ae;
-  }
+.padding {
+  padding: 65px 0;
+}
 
-  .align-right{
-    text-align: right;
-  }
+.padding-bottom {
+  padding-bottom: 65px;
+}
 
-  .inline{
-    display: inline-block;
-  }
+.padding-top {
+  padding-top: 90px;
+}
 
-  .padding{
-    padding: 65px 0;
-  }
+.padding-right {
+  padding-right: 80px;
+}
 
-  .padding-bottom{
-    padding-bottom: 65px;
-  }
+.padding-left {
+  padding-left: 80px;
+}
 
-  .padding-top{
-    padding-top: 90px;
-  }
+.margin-bottom {
+  margin-bottom: 35px;
+}
 
-  .padding-right{
-    padding-right: 80px;
-  }
+.container:after {
+  content: " ";
+  clear: both;
+  display: block;
+}
 
-  .padding-left{
-    padding-left: 80px;
-  }
-
-  .margin-bottom{
-    margin-bottom: 35px;
-  }
-
-  .container:after{
-    content: " ";
-    clear: both;
-    display: block;
-  }
-
-  .sideWrap{
-    position: relative;
-  }
+.sideWrap {
+  position: relative;
+}
 
 /*-----------------------
 Translation
 -------------------------*/
-.pc-translation .container ul{
-    float: right;
-    margin: 0;
-    padding-right: 38px;
+.pc-translation .container ul {
+  float: right;
+  margin: 0;
+  padding-right: 38px;
 }
 
-.pc-translation .container li{
-    margin-right: 10px;
-    float: left;
-    padding: 10px 2px 0;
+.pc-translation .container li {
+  margin-right: 10px;
+  float: left;
+  padding: 10px 2px 0;
 }
 
-.pc-translation .container li a{
-    display: block;
-    height: 20px;
-    line-height: 1.6;
-    text-align: center;
-    border: 1px solid #000;
-    border-radius: 4px;
-    font-size: 12px;
-    color: #0099ae;
-    border: 1px solid #0099ae;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    padding: 0 10px;
-    cursor: pointer;
-    background-color: transparent;
+.pc-translation .container li a {
+  display: block;
+  height: 20px;
+  line-height: 1.6;
+  text-align: center;
+  border: 1px solid #000;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #0099ae;
+  border: 1px solid #0099ae;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .pc-translation .container li a:hover,
-.pc-translation .container li a.active{
-    color: #fff;
-    background-color: #0099ae;
+.pc-translation .container li a.active {
+  color: #fff;
+  background-color: #0099ae;
 }
 
-.pc-translation .container li a:focus{
-    text-decoration: none;
+.pc-translation .container li a:focus {
+  text-decoration: none;
 }
 
 .pc-translation .container li:last-child {
-    margin-right: 0px;
+  margin-right: 0px;
 }
 
 /*-----------------------
 Header
 -------------------------*/
-#header{
+#header {
   margin-bottom: 0;
   padding: 0 0 60px 0;
 }
 
-#header .navbar-inverse .container{
+#header .navbar-inverse .container {
   position: relative;
 }
 
@@ -199,39 +201,41 @@ Header
   margin-bottom: 0;
 }
 
-#header .navbar-brand{
+#header .navbar-brand {
   padding: 0;
   margin-left: 0;
 }
 
-#header .navbar-brand h1{
+#header .navbar-brand h1 {
   padding: 0;
   margin: 0;
 }
 
-#header .navbar-nav.navbar-right >li a {
+#header .navbar-nav.navbar-right > li a {
   color: #000;
   font-size: 12px;
   padding: 20px;
   text-transform: uppercase;
   font-weight: 300;
+  text-decoration: none;
+  background-color: transparent;
 }
 
-#header .navbar-inverse .navbar-nav  li > a.active,
-#header .navbar-inverse .navbar-nav  li > a.active:focus,
+#header .navbar-inverse .navbar-nav li > a.router-link-active,
+#header .navbar-inverse .navbar-nav li > a.router-link-active:focus,
 #header .navbar-nav.navbar-right li > a:hover,
 .navbar-inverse .navbar-nav > .open > a {
-    background-color: inherit;
-    border: 0;
-    color: #00aeef;
+  background-color: inherit;
+  border: 0;
+  color: #00aeef;
 }
 
-#header .navbar-inverse .navbar-nav  li > a.active{
-    font-weight: 700;
+#header .navbar-nav.navbar-right > li a.router-link-active {
+  font-weight: 700;
 }
 
-#header .navbar-inverse .navbar-nav  li a:hover{
-    color: #00aeef;
+#header .navbar-inverse .navbar-nav li a:hover {
+  color: #00aeef;
 }
 
 /*-----------------------
@@ -242,7 +246,7 @@ index slider
   position: relative;
 }
 
-#home-slider .row{
+#home-slider .row {
   display: block;
 }
 
@@ -251,7 +255,7 @@ index slider
   height: 450px;
 }
 
-#home-slider .slide-text{
+#home-slider .slide-text {
   position: absolute;
   top: 50px;
   left: 0;
@@ -259,8 +263,9 @@ index slider
 }
 
 .animate-in .slide-text {
-  -webkit-animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;
-  animation: fadeInLeftBig 700ms cubic-bezier(0.190,1.000,0.220,1.000) 200ms both;
+  -webkit-animation: fadeInLeftBig 700ms cubic-bezier(0.19, 1, 0.22, 1) 200ms
+    both;
+  animation: fadeInLeftBig 700ms cubic-bezier(0.19, 1, 0.22, 1) 200ms both;
 }
 
 #home-slider .slider-hill {
@@ -318,8 +323,7 @@ index slider
   animation: scaleOut 500ms ease-in-out 1500ms both;
 }
 
-
-#home-slider h1{
+#home-slider h1 {
   margin-top: 100px;
   margin-bottom: 25px;
 }
@@ -328,7 +332,7 @@ index slider
   margin-top: 20px;
 }
 
-.preloader{
+.preloader {
   position: absolute;
   left: 0;
   top: 0;
@@ -364,25 +368,25 @@ TITLE
   width: 100%;
 }
 
-#page-breadcrumb .vertical-center{
+#page-breadcrumb .vertical-center {
   display: table-cell;
   vertical-align: middle;
   width: 100%;
   position: static;
 }
 
-.action h1{
+.action h1 {
   margin-top: 0;
 }
 
 /*-----------------------
 首頁
 -------------------------*/
-#services{
-    margin-top: 50px;
+#services {
+  margin-top: 50px;
 }
 
-.single-service{
+.single-service {
   overflow: hidden;
   display: block;
 }
@@ -407,31 +411,31 @@ TITLE
 /*-----------------------
 關於我
 -------------------------*/
-.top-zero{
+.top-zero {
   margin-top: 0;
 }
 
-h3.top-zero{
+h3.top-zero {
   font-size: 20px;
 }
 
-.single-skill h3{
+.single-skill h3 {
   margin-top: 20px;
   font-size: 16px;
 }
 
-.single-skill h3.topZ{
-    margin-top: 0;
+.single-skill h3.topZ {
+  margin-top: 0;
   font-size: 16px;
 }
 
-.progress{
+.progress {
   height: 30px;
   box-shadow: none;
   -webkit-box-shadow: none;
 }
 
-.progress-bar{
+.progress-bar {
   line-height: 30px;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -439,14 +443,14 @@ h3.top-zero{
   width: 10%;
 }
 
-.progress-bar.progress-bar-primary{
+.progress-bar.progress-bar-primary {
   background: #00aeef;
 }
 
 /*-----------------------
 美術作品
 -------------------------*/
-#portfolio .row{
+#portfolio .row {
   margin-left: -10px;
   margin-right: -10px;
 }
@@ -472,7 +476,7 @@ h3.top-zero{
   border: none;
 }
 
-.portfolio-filter li .btn-primary{
+.portfolio-filter li .btn-primary {
   background: transparent;
   box-shadow: none;
   -webkit-box-shadow: none;
@@ -487,7 +491,7 @@ h3.top-zero{
   color: #00aeef;
 }
 
-.portfolio-filter li button.btn-primary:before{
+.portfolio-filter li button.btn-primary:before {
   position: absolute;
   content: "";
   left: 0;
@@ -501,7 +505,7 @@ h3.top-zero{
 .portfolio-single {
   position: relative;
 }
-.portfolio-single:hover .portfolio-view{
+.portfolio-single:hover .portfolio-view {
   display: block;
   -webkit-animation: fadeInUp 400ms;
   animation: fadeInUp 400ms;
@@ -518,7 +522,7 @@ h3.top-zero{
   position: absolute;
   top: 0;
   height: 100%;
-  background:rgba(38, 125, 188, 0.9);
+  background: rgba(38, 125, 188, 0.9);
   width: 100%;
   text-align: center;
 }
@@ -642,24 +646,24 @@ h3.top-zero{
 /*-----------------------
 程式專案
 -------------------------*/
-.portfolio-information.padding-top{
+.portfolio-information.padding-top {
   padding-top: 90px;
 }
 
-.project-name h2{
+.project-name h2 {
   margin-top: 0;
   margin-bottom: 15px;
 }
 
-.portfolio-information .hooper{
+.portfolio-information .hooper {
   height: auto;
 }
 
-.portfolio-information .hooper-pagination{
+.portfolio-information .hooper-pagination {
   bottom: -20px;
 }
 
-.portfolio-information .hooper-indicator{
+.portfolio-information .hooper-indicator {
   border: 1px solid #0884d5;
 }
 
@@ -669,50 +673,53 @@ h3.top-zero{
   padding: 0;
 }
 
-.listWrap li a,.listWrap li p,.listWrap li span{
-    font-size: 12px;
-    padding: 0;
-    padding-right: 15px;
-    color: #267dbc;
+.listWrap li a,
+.listWrap li p,
+.listWrap li span {
+  font-size: 12px;
+  padding: 0;
+  padding-right: 15px;
+  color: #267dbc;
 }
 
-.listWrap li a{
-    display: block;
-    border: 1px solid #267dbc;
-    border-radius: 4px;
-    padding: 2px 15px;
+.listWrap li a {
+  display: block;
+  border: 1px solid #267dbc;
+  border-radius: 4px;
+  padding: 2px 15px;
 }
 
-.listWrap li p svg,.listWrap li span svg{
+.listWrap li p svg,
+.listWrap li span svg {
   margin-right: 8px;
 }
 
-.listWrap li a:hover{
-    color: #fff;
-    border: 1px solid #0099ae;
-    background-color: #0099ae;
+.listWrap li a:hover {
+  color: #fff;
+  border: 1px solid #0099ae;
+  background-color: #0099ae;
 }
 
 .skills .listWrap,
 .movie .listWrap,
-.tools .listWrap{
+.tools .listWrap {
   margin-left: 35px;
 }
 
 .skills .listWrap li,
 .movie .listWrap li,
-.tools .listWrap li{
+.tools .listWrap li {
   display: inline-block;
 }
 
-.tools .listWrap li p{
+.tools .listWrap li p {
   font-weight: normal;
 }
 
 /*專案圖片*/
 .team-carousel {
   margin-top: 50px;
-    margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .team-carousel-control {
@@ -738,7 +745,7 @@ h3.top-zero{
   background-image: url(~/assets/img/aboutus/left.png);
 }
 
-.team-carousel-control:hover{
+.team-carousel-control:hover {
   background-position: 0 -18px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -748,25 +755,25 @@ h3.top-zero{
 }
 
 .carousel-indicators.visible-xs {
-      height: 20px;
-      margin: 0;
-      padding: 0;
-      position: absolute;
-      top: -35px;
-      width: 100%;
-      left: 0;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: -35px;
+  width: 100%;
+  left: 0;
 }
 
 .carousel-indicators.visible-xs li {
-    border-color: #0884d5;
-    border-width: 2px;
-    height: 12px;
-    margin: 0 5px 0 0;
-    width: 12px;
+  border-color: #0884d5;
+  border-width: 2px;
+  height: 12px;
+  margin: 0 5px 0 0;
+  width: 12px;
 }
 
 .carousel-indicators.visible-xs li.active {
-    background: rgba(77, 223, 245, 0.7);
+  background: rgba(77, 223, 245, 0.7);
 }
 
 .team-single {
@@ -783,13 +790,14 @@ h3.top-zero{
   -moz-transition: all 0.9s ease;
   -ms-transition: all 0.9s ease;
   -o-transition: all 0.9s ease;
-  transition: all 0.9s ease;transition: all 0.9s ease 0s;
+  transition: all 0.9s ease;
+  transition: all 0.9s ease 0s;
   width: 100%;
   height: 100%;
 }
 
-.team-single:hover .social-profile{
-  background:rgba(38, 125, 188, 0.9);
+.team-single:hover .social-profile {
+  background: rgba(38, 125, 188, 0.9);
   display: block;
   -webkit-animation: fadeInUp 400ms;
   animation: fadeInUp 400ms;
@@ -832,35 +840,38 @@ h3.top-zero{
 }
 
 /*網頁作品*/
-#other-work{
-    margin: 20px 0;
+#other-work {
+  margin: 20px 0;
 }
 
-.workW{
-    padding: 0 20px;
-    margin: 30px 30px 80px 30px;
+.workW {
+  padding: 0 20px;
+  margin: 30px 30px 80px 30px;
 }
 
-.work-img{
-    overflow: hidden;
+.work-img {
+  overflow: hidden;
 }
 
-.work-img img{
-    width: 100%;
+.work-img img {
+  width: 100%;
 }
 
-.work-title{
-    margin: 10px 0 5px;
-    font-size: 1.2em;
-    font-weight: bold;
+.work-title {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  font-weight: bold;
 }
-.work-title > *{
+.work-title > * {
   color: #267dbc;
 }
 
-.grow { transition: all 1s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
-
+.grow {
+  transition: all 1s ease-in-out;
+}
+.grow:hover {
+  transform: scale(1.1);
+}
 
 /*-----------------------
 Footer
@@ -878,7 +889,7 @@ Footer
   height: 145px;
 }
 
-.copyright-text{
+.copyright-text {
   margin-top: 70px;
   color: #fff;
   font-size: 16px;

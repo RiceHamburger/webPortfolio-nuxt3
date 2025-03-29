@@ -1,25 +1,19 @@
 {
-  "name": "nuxt-app",
+  "name": "nuxt3-app",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
-  },
-  "devDependencies": {
-    "@bootstrap-vue-next/nuxt": "^0.24.2",
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18.16.19",
-    "bootstrap": "^5.3.3",
-    "bootstrap-vue-next": "^0.24.2",
-    "nuxt": "^3.12.3"
+    "preview": "nuxt preview"
   },
   "dependencies": {
+    "@bootstrap-vue-next/nuxt": "^0.28.3",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
-    "dayjs": "^1.11.9"
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue-next": "^0.28.3",
+    "nuxt": "^3.12.3"
   }
 }

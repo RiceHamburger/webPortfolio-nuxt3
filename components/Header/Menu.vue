@@ -10,11 +10,11 @@
       <BNavbarToggle target="nav-collapse"></BNavbarToggle>
 
       <BCollapse id="nav-collapse" is-nav>
-        <BNavbarNav class="navbar-nav ms-auto">
-          <!-- <li class="nav-item"><NuxtLink to="/">Home</NuxtLink></li>
+        <BNavbarNav class="navbar-nav navbar-right ms-auto">
+          <li class="nav-item"><NuxtLink to="/">Home</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/aboutme">About</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/gallery">Gallery</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/program">Game</NuxtLink></li>
+          <!-- <li class="nav-item"><NuxtLink to="/program">Game</NuxtLink></li>
           <li class="nav-item"><NuxtLink to="/web">Web</NuxtLink></li> -->
         </BNavbarNav>
       </BCollapse>

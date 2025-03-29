@@ -1,9 +1,9 @@
 // filepath: /workspace/webPortfolio-nuxt3/plugins/fontawesome.js
 import { library, config } from "@fortawesome/fontawesome-svg-core";
-import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { faSun, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 
-library.add(faSun);
+library.add([faSun, faChevronUp]);
 
 config.autoAddCss = false;
 

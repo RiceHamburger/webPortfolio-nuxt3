@@ -37,6 +37,7 @@ onMounted(() => {
             <div class="slide-text">
               <h1>Game + Create = Life</h1>
               <p>in-short</p>
+              <nuxt-link class="btn btn-common">ABOUT ME</nuxt-link>
             </div>
           </div>
         </BRow>
@@ -66,6 +67,7 @@ onMounted(() => {
               </div>
               <h2>Gallery</h2>
               <p>art-in-short</p>
+              <nuxt-link class="btn btn-common">Link</nuxt-link>
             </div>
           </BCol>
           <BCol
@@ -85,6 +87,7 @@ onMounted(() => {
               </div>
               <h2>Game</h2>
               <p>program-in-short</p>
+              <nuxt-link class="btn btn-common">Link</nuxt-link>
             </div>
           </BCol>
           <BCol
@@ -104,6 +107,7 @@ onMounted(() => {
               </div>
               <h2>Web</h2>
               <p>web-in-short</p>
+              <nuxt-link class="btn btn-common">Link</nuxt-link>
             </div>
           </BCol>
         </BRow>

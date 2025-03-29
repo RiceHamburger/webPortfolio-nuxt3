@@ -8,7 +8,6 @@ export default defineNuxtConfig({
       meta: [
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { hid: "description", name: "description", content: "" },
       ],
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
@@ -24,6 +23,6 @@ export default defineNuxtConfig({
     transpile: ["@fortawesome/vue-fontawesome"],
   },
   modules: ["@bootstrap-vue-next/nuxt"],
-  devtools: true,
+  devtools: { enabled: true },
   compatibilityDate: "2025-03-29",
 });

@@ -6,13 +6,13 @@
     <main>
       <slot />
     </main>
-    <!-- <Footer></Footer> -->
+    <Footer></Footer>
     <PageTopBtn></PageTopBtn>
   </div>
 </template>
 
 <style scoped>
 main {
-		min-height: calc(100vh - 450px);
+  min-height: calc(100vh - 450px);
 }
 </style>

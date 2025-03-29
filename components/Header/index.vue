@@ -6,13 +6,19 @@
       <div class="container">
         <ul class="overflow">
           <li>
-            <span>ZH-TW</span>
+            <nuxt-link>
+              <span>ZH-TW</span>
+            </nuxt-link>
           </li>
           <li>
-            <span>EN</span>
+            <nuxt-link>
+              <span>EN</span>
+            </nuxt-link>
           </li>
           <li>
-            <span>JP</span>
+            <nuxt-link>
+              <span>JP</span>
+            </nuxt-link>
           </li>
         </ul>
       </div>

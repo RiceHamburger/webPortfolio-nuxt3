@@ -22,8 +22,12 @@ const localePath = useLocalePath();
           <li class="nav-item">
             <NuxtLink :to="localePath({ name: 'gallery' })">Gallery</NuxtLink>
           </li>
-          <!-- <li class="nav-item"><NuxtLink to="/program">Game</NuxtLink></li>
-          <li class="nav-item"><NuxtLink to="/web">Web</NuxtLink></li> -->
+          <li class="nav-item">
+            <NuxtLink :to="localePath({ name: 'program' })">Game</NuxtLink>
+          </li>
+          <li class="nav-item">
+            <NuxtLink :to="localePath({ name: 'web' })">Web</NuxtLink>
+          </li>
         </BNavbarNav>
       </BCollapse>
     </BNavbar>

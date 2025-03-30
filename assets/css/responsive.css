@@ -38,6 +38,7 @@
     border-color: #00aeef;
     padding: 0.25rem 0.5rem;
     outline: none;
+    box-shadow: none;
   }
 
   .navbar-header .navbar-toggler .navbar-toggler-icon {
@@ -159,7 +160,7 @@
     padding-top: 10px;
   }
 
-  #header .navbar{
+  #header .navbar {
     padding: 0;
   }
 
@@ -212,11 +213,11 @@
   }
 
   /* gallery */
-  .portfolio-filter li button{
+  .portfolio-filter li button {
     padding: 0 0 0 17px;
   }
 
-  .portfolio-filter li button.btn-primary:before{
+  .portfolio-filter li button.btn-primary:before {
     left: 5px;
     width: 10px;
     height: 10px;

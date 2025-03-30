@@ -9,7 +9,15 @@ useHead({
 const pageTitle = ref("Gallery");
 
 onMounted(() => {
-  Fancybox.bind('[data-fancybox="gallery"]');
+  Fancybox.bind('[data-fancybox="gallery"]', {
+    Toolbar: {
+      display: {
+        left: [],
+        middle: [],
+        right: ["close"],
+      },
+    },
+  });
 });
 
 const galleries = ref([]);

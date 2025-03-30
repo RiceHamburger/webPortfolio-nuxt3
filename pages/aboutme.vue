@@ -1,4 +1,7 @@
 <script setup>
+useHead({
+  title: "About Me | NO-DATA",
+});
 const pageTitle = ref("About Me");
 </script>
 

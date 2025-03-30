@@ -543,6 +543,7 @@ h3.top-zero {
 }
 
 .portfolio-view .nav-pills li a {
+  display: inline-block;
   color: #fff;
   border: 1px solid #fff;
   width: 40px;

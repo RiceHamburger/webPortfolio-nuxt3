@@ -1,6 +1,8 @@
 <script setup>
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
+import { apiGetGalleryData } from "~/composables/api";
+
 useHead({
   title: "Gallery | NO-DATA",
 });
@@ -9,6 +11,29 @@ const pageTitle = ref("Gallery");
 onMounted(() => {
   Fancybox.bind('[data-fancybox="gallery"]');
 });
+
+const galleries = ref([]);
+const classExtraction = (item) => {
+  return item.tags.map((tag) => tag);
+};
+
+try {
+  const { data, error } = await apiGetGalleryData();
+
+  if (error.value) {
+    throw error.value;
+  }
+
+  galleries.value = (data.value || []).map((item) => ({
+    id: item.id,
+    title: item.title,
+    img: item.img,
+    img_s: item.img_s,
+    tags: JSON.parse(item.tags),
+  }));
+} catch (err) {
+  console.error("API 錯誤：", err);
+}
 </script>
 
 <template>
@@ -75,23 +100,31 @@ onMounted(() => {
           </ul>
 
           <b-row class="portfolio-items">
-            <b-col cols="6" sm="4" md="3" class="portfolio-item">
+            <b-col
+              cols="6"
+              sm="4"
+              md="3"
+              class="portfolio-item"
+              :class="classExtraction(item)"
+              v-for="item in galleries"
+              :key="item.id"
+            >
               <div class="portfolio-wrapper">
                 <div class="portfolio-single">
                   <div class="portfolio-thumb">
                     <b-img
-                      src="/img/illastration/clander_m.jpg"
+                      :src="`/img/illastration/${item.img_s}`"
                       fluid
-                      alt="item.title"
+                      :alt="item.title"
                     ></b-img>
                   </div>
                   <div class="portfolio-view">
                     <ul class="nav nav-pills">
                       <li>
                         <a
-                          href="/img/illastration/clander.jpg"
+                          :href="`/img/illastration/${item.img}`"
                           data-fancybox="gallery"
-                          :data-caption="'test'"
+                          :data-caption="item.title"
                           ><fa icon="eye" />
                         </a>
                       </li>
@@ -99,7 +132,7 @@ onMounted(() => {
                   </div>
                 </div>
                 <div class="portfolio-info">
-                  <h2>item.title</h2>
+                  <h2>{{ item.title }}</h2>
                 </div>
               </div>
             </b-col>

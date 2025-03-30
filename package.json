@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@bootstrap-vue-next/nuxt": "^0.28.3",
+    "@fancyapps/ui": "^5.0.36",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",

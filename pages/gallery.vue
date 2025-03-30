@@ -1,8 +1,14 @@
 <script setup>
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 useHead({
   title: "Gallery | NO-DATA",
 });
 const pageTitle = ref("Gallery");
+
+onMounted(() => {
+  Fancybox.bind('[data-fancybox="gallery"]');
+});
 </script>
 
 <template>
@@ -82,7 +88,12 @@ const pageTitle = ref("Gallery");
                   <div class="portfolio-view">
                     <ul class="nav nav-pills">
                       <li>
-                        <a href=""><fa icon="eye" /></a>
+                        <a
+                          href="/img/illastration/clander.jpg"
+                          data-fancybox="gallery"
+                          :data-caption="'test'"
+                          ><fa icon="eye" />
+                        </a>
                       </li>
                     </ul>
                   </div>

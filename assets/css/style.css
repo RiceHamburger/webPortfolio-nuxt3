@@ -244,7 +244,7 @@ Header
 index slider
 -------------------------*/
 #home-slider {
-  background: url(~/assets/img/home/slider-bg_1.png) 0 100% repeat-x;
+  background: url(/img/home/slider-bg_1.png) 0 100% repeat-x;
   position: relative;
 }
 
@@ -499,7 +499,7 @@ h3.top-zero {
   left: 0;
   width: 13px;
   height: 16px;
-  background: url(~/assets/img/portfolio/icon.png);
+  background: url(/img/portfolio/icon.png);
   top: 5px;
 }
 
@@ -739,12 +739,12 @@ h3.top-zero {
 
 .right.team-carousel-control {
   right: -50px;
-  background-image: url(~/assets/img/aboutus/right.png);
+  background-image: url(/img/aboutus/right.png);
 }
 
 .left.team-carousel-control {
   left: -50px;
-  background-image: url(~/assets/img/aboutus/left.png);
+  background-image: url(/img/aboutus/left.png);
 }
 
 .team-carousel-control:hover {
@@ -880,7 +880,7 @@ Footer
 -------------------------*/
 #footer {
   padding-bottom: 10px;
-  background-image: url(~/assets/img/home/footer_1.png);
+  background-image: url(/img/home/footer_1.png);
   background-repeat: repeat-x;
   background-position: bottom;
   background-size: contain;

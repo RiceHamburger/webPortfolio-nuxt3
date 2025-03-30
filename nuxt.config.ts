@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     },
   },
   css: [
+    "@fortawesome/fontawesome-svg-core/styles.css",
     "bootstrap/dist/css/bootstrap.css",
     "@/assets/css/animate.min.css",
     "@/assets/css/style.css",
@@ -36,5 +37,10 @@ export default defineNuxtConfig({
     langDir: path.resolve("./locales"),
   },
   devtools: { enabled: true },
+  vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
+  },
   compatibilityDate: "2025-03-29",
 });

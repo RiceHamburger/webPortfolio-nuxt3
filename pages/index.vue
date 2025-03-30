@@ -16,22 +16,22 @@ onMounted(() => {
         <BRow>
           <div :class="{ 'animate-in': isAnimateIn, 'main-slider': true }">
             <img
-              src="@/assets/img/home/slider/house.png"
+              src="/img/home/slider/house.png"
               class="slider-house"
               alt="slider image"
             />
             <img
-              src="@/assets/img/home/slider/birds1.png"
+              src="/img/home/slider/birds1.png"
               class="slider-birds1"
               alt="slider image"
             />
             <img
-              src="@/assets/img/home/slider/birds2.png"
+              src="/img/home/slider/birds2.png"
               class="slider-birds2"
               alt="slider image"
             />
             <img
-              src="@/assets/img/home/slider/people.png"
+              src="/img/home/slider/people.png"
               class="slider-hill"
               alt="slider image"
             />
@@ -48,7 +48,7 @@ onMounted(() => {
         </BRow>
       </BContainer>
       <div v-if="showPreloader" class="preloader">
-        <fa :icon="['fas', 'sun']" class="fa-spin" />
+        <fa :icon="['fas', 'sun']" spin />
       </div>
     </section>
     <!--slider-->
@@ -68,7 +68,7 @@ onMounted(() => {
                 data-aos-duration="500"
                 data-aos-delay="30"
               >
-                <img src="@/assets/img/home/icon1.png" alt="" />
+                <img src="/img/home/icon1.png" alt="" />
               </div>
               <h2>Gallery</h2>
               <p>{{ $t("art-in-short") }}</p>
@@ -92,7 +92,7 @@ onMounted(() => {
                 data-aos-duration="500"
                 data-aos-delay="60"
               >
-                <img src="@/assets/img/home/icon2.png" alt="" />
+                <img src="/img/home/icon2.png" alt="" />
               </div>
               <h2>Game</h2>
               <p>{{ $t("program-in-short") }}</p>
@@ -112,7 +112,7 @@ onMounted(() => {
                 data-aos-duration="500"
                 data-aos-delay="90"
               >
-                <img src="@/assets/img/home/icon3.png" alt="" />
+                <img src="/img/home/icon3.png" alt="" />
               </div>
               <h2>Web</h2>
               <p>{{ $t("web-in-short") }}</p>

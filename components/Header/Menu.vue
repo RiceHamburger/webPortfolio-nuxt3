@@ -6,7 +6,7 @@ const localePath = useLocalePath();
   <BContainer class="navbar-inverse">
     <BNavbar toggleable="lg" variant="faded" type="light" class="navbar-header">
       <BNavbarBrand :to="localePath('/')"
-        ><h1><img src="~assets/img/logo_1.png" alt="logo" /></h1>
+        ><h1><img src="/img/logo_1.png" alt="logo" /></h1>
       </BNavbarBrand>
 
       <BNavbarToggle target="nav-collapse"></BNavbarToggle>

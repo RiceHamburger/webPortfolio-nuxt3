@@ -24,7 +24,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ["@fortawesome/vue-fontawesome"],
   },
-  modules: ["@bootstrap-vue-next/nuxt", "@nuxtjs/i18n"],
+  modules: ["@bootstrap-vue-next/nuxt", "@nuxtjs/i18n", "@pinia/nuxt"],
   i18n: {
     strategy: "prefix",
     locales: [

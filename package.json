@@ -14,9 +14,12 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nuxtjs/i18n": "9.4.0",
+    "@pinia/nuxt": "^0.10.1",
     "bootstrap": "^5.3.3",
     "bootstrap-vue-next": "^0.28.3",
-    "nuxt": "^3.12.3"
+    "nuxt": "^3.12.3",
+    "pinia": "^3.0.1",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
     "@types/node": "^22.13.14",

@@ -825,6 +825,7 @@ h3.top-zero {
 }
 
 .social-profile .nav-pills li a {
+  display: inline-block;
   color: #fff;
   border: 1px solid #fff;
   width: 40px;

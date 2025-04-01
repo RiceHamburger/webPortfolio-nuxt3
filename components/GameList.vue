@@ -82,11 +82,7 @@ onMounted(() => {
               <h3>Video</h3>
               <ul class="listWrap">
                 <li>
-                  <a
-                    class="video"
-                    data-fancybox
-                    :title="item.title"
-                    :href="item.video"
+                  <a class="video" data-fancybox :href="item.video"
                     ><fa icon="play"
                   /></a>
                 </li>

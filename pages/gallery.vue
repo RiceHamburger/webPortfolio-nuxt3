@@ -2,11 +2,31 @@
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { apiGetGalleryData } from "~/composables/api";
+import Isotope from "isotope-layout";
 
 useHead({
   title: "Gallery | NO-DATA",
 });
 const pageTitle = ref("Gallery");
+let iso = null;
+
+const filter = (slug) => {
+  const buttons = document.querySelectorAll(".portfolio-filter button");
+  buttons.forEach((btn) => {
+    const filterAttr = btn.getAttribute("data-filter");
+    if (filterAttr === slug) {
+      btn.classList.remove("btn-default");
+      btn.classList.add("btn-primary");
+    } else {
+      btn.classList.remove("btn-primary");
+      btn.classList.add("btn-default");
+    }
+  });
+
+  if (iso) {
+    iso.arrange({ filter: slug });
+  }
+};
 
 onMounted(() => {
   Fancybox.bind('[data-fancybox="gallery"]', {
@@ -39,6 +59,14 @@ try {
     img_s: item.img_s,
     tags: JSON.parse(item.tags),
   }));
+
+  await nextTick();
+  setTimeout(() => {
+    iso = new Isotope(".portfolio-items", {
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+    });
+  }, 300);
 } catch (err) {
   console.error("API 錯誤：", err);
 }

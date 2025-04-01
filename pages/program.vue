@@ -4,7 +4,6 @@ useHead({
   title: "Project | NO-DATA",
 });
 const pageTitle = ref("Project");
-const loading = ref(true);
 const projects = ref([]);
 
 try {
@@ -45,8 +44,6 @@ try {
   projects.value = resetProjectsArray;
 } catch (err) {
   console.error("錯誤處理:", err);
-} finally {
-  loading.value = false;
 }
 </script>
 
@@ -56,7 +53,6 @@ try {
       :pageTitle="pageTitle"
       :pageDescription="$t('program-title')"
     />
-    <Loading :loading="loading" />
     <GameList :projects="projects" />
   </div>
 </template>

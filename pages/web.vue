@@ -39,8 +39,6 @@ try {
       :pageTitle="pageTitle"
       :pageDescription="$t('web-title')"
     />
-
-    <Loading :loading="true" />
     <section id="other-work">
       <b-container>
         <b-row>

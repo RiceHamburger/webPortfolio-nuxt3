@@ -1,5 +1,10 @@
 <script setup>
-const loading = ref(false);
+defineProps({
+  loading: {
+    type: Boolean,
+    default: false,
+  },
+});
 </script>
 
 <template>

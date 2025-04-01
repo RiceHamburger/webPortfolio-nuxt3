@@ -50,7 +50,6 @@ try {
       :pageTitle="pageTitle"
       :pageDescription="$t('gallery-title')"
     />
-    <Loading :loading="true" />
     <section id="portfolio" class="margin-bottom">
       <b-container>
         <div>

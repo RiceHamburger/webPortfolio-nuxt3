@@ -96,7 +96,11 @@ onMounted(() => {
               </div>
               <h2>Game</h2>
               <p>{{ $t("program-in-short") }}</p>
-              <nuxt-link class="btn btn-common">Link</nuxt-link>
+              <nuxt-link
+                :to="localePath({ name: 'program' })"
+                class="btn btn-common"
+                >Link</nuxt-link
+              >
             </div>
           </BCol>
           <BCol
@@ -116,7 +120,11 @@ onMounted(() => {
               </div>
               <h2>Web</h2>
               <p>{{ $t("web-in-short") }}</p>
-              <nuxt-link class="btn btn-common">Link</nuxt-link>
+              <nuxt-link
+                :to="localePath({ name: 'web' })"
+                class="btn btn-common"
+                >Link</nuxt-link
+              >
             </div>
           </BCol>
         </BRow>

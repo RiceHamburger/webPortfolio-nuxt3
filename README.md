@@ -1,63 +1,22 @@
-# Nuxt 3 Minimal Starter
+# webPortfolio-nuxt
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Build Setup
 
-## Setup
+## node 18.20.4
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## npm 10.7.0
 
 ```bash
-# npm
-npm run dev
+# install dependencies
+$ npm install
 
-# pnpm
-pnpm run dev
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-# yarn
-yarn dev
-```
+# build for production and launch server
+$ npm run build
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
+$ npm run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

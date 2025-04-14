@@ -1,9 +1,10 @@
-import { _ as _sfc_main$1 } from './InsidePageTitle.vue.mjs';
+import { _ as __nuxt_component_0 } from './InsidePageTitle.vue.mjs';
 import { BContainer, BRow, BCol } from 'bootstrap-vue-next/components/BContainer';
 import { ref, withAsyncContext, resolveComponent, mergeProps, unref, withCtx, createBlock, openBlock, Fragment, renderList, createVNode, createTextVNode, toDisplayString, useSSRContext } from 'vue';
 import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrInterpolate } from 'vue/server-renderer';
 import { a as apiGetWebData } from './index.mjs';
 import { u as useHead } from './v3.mjs';
+import './server.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -13,7 +14,6 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
-import './server.mjs';
 import 'pinia';
 import 'vue-router';
 import 'bootstrap-vue-next/directives';
@@ -59,7 +59,7 @@ const _sfc_main = {
       console.error("API 錯誤：", err);
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_InsidePageTitle = _sfc_main$1;
+      const _component_InsidePageTitle = __nuxt_component_0;
       const _component_b_container = BContainer;
       const _component_b_row = BRow;
       const _component_b_col = BCol;

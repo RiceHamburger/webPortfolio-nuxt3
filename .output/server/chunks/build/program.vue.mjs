@@ -1,4 +1,4 @@
-import { _ as _sfc_main$2 } from './InsidePageTitle.vue.mjs';
+import { _ as __nuxt_component_0 } from './InsidePageTitle.vue.mjs';
 import { BContainer, BRow, BCol } from 'bootstrap-vue-next/components/BContainer';
 import { BImg } from 'bootstrap-vue-next/components/BImg';
 import { resolveComponent, withCtx, createVNode, toDisplayString, createTextVNode, createBlock, openBlock, Fragment, renderList, unref, useSSRContext, ref, withAsyncContext, mergeProps } from 'vue';
@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation } from 'swiper/modules';
 import { c as apiGetProjectData } from './index.mjs';
 import { u as useHead } from './v3.mjs';
+import './server.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -16,7 +17,6 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
-import './server.mjs';
 import 'pinia';
 import 'vue-router';
 import 'bootstrap-vue-next/directives';
@@ -784,7 +784,7 @@ const _sfc_main = {
       console.error("錯誤處理:", err);
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_InsidePageTitle = _sfc_main$2;
+      const _component_InsidePageTitle = __nuxt_component_0;
       const _component_GameList = _sfc_main$1;
       _push(`<div${ssrRenderAttrs(mergeProps({ class: "sideWrap" }, _attrs))}>`);
       _push(ssrRenderComponent(_component_InsidePageTitle, {

@@ -1,4 +1,4 @@
-import { _ as _sfc_main$1 } from './InsidePageTitle.vue.mjs';
+import { _ as __nuxt_component_0 } from './InsidePageTitle.vue.mjs';
 import { BContainer, BRow, BCol } from 'bootstrap-vue-next/components/BContainer';
 import { BImg } from 'bootstrap-vue-next/components/BImg';
 import { ref, withAsyncContext, nextTick, resolveComponent, mergeProps, unref, withCtx, createVNode, toDisplayString, createBlock, openBlock, Fragment, renderList, useSSRContext } from 'vue';
@@ -6,6 +6,7 @@ import { ssrRenderAttrs, ssrRenderComponent, ssrRenderList, ssrRenderAttr, ssrIn
 import { b as apiGetGalleryData } from './index.mjs';
 import Isotope from 'isotope-layout';
 import { u as useHead } from './v3.mjs';
+import './server.mjs';
 import '../nitro/nitro.mjs';
 import 'node:http';
 import 'node:https';
@@ -15,7 +16,6 @@ import 'node:fs';
 import 'node:path';
 import 'node:crypto';
 import 'node:url';
-import './server.mjs';
 import 'pinia';
 import 'vue-router';
 import 'bootstrap-vue-next/directives';
@@ -82,7 +82,7 @@ const _sfc_main = {
       console.error("API 錯誤：", err);
     }
     return (_ctx, _push, _parent, _attrs) => {
-      const _component_InsidePageTitle = _sfc_main$1;
+      const _component_InsidePageTitle = __nuxt_component_0;
       const _component_b_container = BContainer;
       const _component_b_row = BRow;
       const _component_b_col = BCol;

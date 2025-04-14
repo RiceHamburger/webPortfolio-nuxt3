@@ -10,17 +10,16 @@ export default defineNuxtConfig({
         { charset: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
       ],
-      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+        { rel: "stylesheet", href: "/css/bootstrap.css" },
+        { rel: "stylesheet", href: "/css/style.css" },
+        { rel: "stylesheet", href: "/css/animate.min.css" },
+        { rel: "stylesheet", href: "/css/responsive.css" },
+      ],
     },
   },
-  css: [
-    "@fortawesome/fontawesome-svg-core/styles.css",
-    "bootstrap/dist/css/bootstrap.css",
-    "@/assets/css/animate.min.css",
-    "@/assets/css/style.css",
-    "@/assets/css/responsive.css",
-    "@/assets/css/notifications.css",
-  ],
+  css: ["@fortawesome/fontawesome-svg-core/styles.css"],
   build: {
     transpile: ["@fortawesome/vue-fontawesome"],
   },
@@ -42,5 +41,5 @@ export default defineNuxtConfig({
       "process.env.DEBUG": false,
     },
   },
-  compatibilityDate: "2025-03-29",
+  compatibilityDate: "2025-04-14",
 });

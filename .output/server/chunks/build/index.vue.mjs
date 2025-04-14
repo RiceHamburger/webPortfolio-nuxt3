@@ -62,7 +62,7 @@ const _sfc_main = {
                   _push3(`<div class="${ssrRenderClass({ "animate-in": unref(isAnimateIn), "main-slider": true })}"${_scopeId2}><img${ssrRenderAttr("src", _imports_0)} class="slider-house" alt="slider image"${_scopeId2}><img${ssrRenderAttr("src", _imports_1)} class="slider-birds1" alt="slider image"${_scopeId2}><img${ssrRenderAttr("src", _imports_2)} class="slider-birds2" alt="slider image"${_scopeId2}><img${ssrRenderAttr("src", _imports_3)} class="slider-hill" alt="slider image"${_scopeId2}><div class="slide-text"${_scopeId2}><h1${_scopeId2}>Game + Create = Life</h1><p${_scopeId2}>${ssrInterpolate(_ctx.$t("in-short"))}</p>`);
                   _push3(ssrRenderComponent(_component_nuxt_link, {
                     to: unref(localePath)({ name: "aboutme" }),
-                    class: "btn btn-common"
+                    class: "btn-common"
                   }, {
                     default: withCtx((_3, _push4, _parent4, _scopeId3) => {
                       if (_push4) {
@@ -106,7 +106,7 @@ const _sfc_main = {
                         createVNode("p", null, toDisplayString(_ctx.$t("in-short")), 1),
                         createVNode(_component_nuxt_link, {
                           to: unref(localePath)({ name: "aboutme" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx(() => [
                             createTextVNode("ABOUT ME")
@@ -152,7 +152,7 @@ const _sfc_main = {
                       createVNode("p", null, toDisplayString(_ctx.$t("in-short")), 1),
                       createVNode(_component_nuxt_link, {
                         to: unref(localePath)({ name: "aboutme" }),
-                        class: "btn btn-common"
+                        class: "btn-common"
                       }, {
                         default: withCtx(() => [
                           createTextVNode("ABOUT ME")
@@ -198,7 +198,7 @@ const _sfc_main = {
                         _push4(`<div class="single-service"${_scopeId3}><div data-aos="fade-up" data-aos-duration="500" data-aos-delay="30"${_scopeId3}><img${ssrRenderAttr("src", _imports_4)} alt=""${_scopeId3}></div><h2${_scopeId3}>Gallery</h2><p${_scopeId3}>${ssrInterpolate(_ctx.$t("art-in-short"))}</p>`);
                         _push4(ssrRenderComponent(_component_nuxt_link, {
                           to: unref(localePath)({ name: "gallery" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
@@ -229,7 +229,7 @@ const _sfc_main = {
                             createVNode("p", null, toDisplayString(_ctx.$t("art-in-short")), 1),
                             createVNode(_component_nuxt_link, {
                               to: unref(localePath)({ name: "gallery" }),
-                              class: "btn btn-common"
+                              class: "btn-common"
                             }, {
                               default: withCtx(() => [
                                 createTextVNode("Link")
@@ -254,7 +254,7 @@ const _sfc_main = {
                         _push4(`<div class="single-service"${_scopeId3}><div data-aos="fade-up" data-aos-duration="500" data-aos-delay="60"${_scopeId3}><img${ssrRenderAttr("src", _imports_5)} alt=""${_scopeId3}></div><h2${_scopeId3}>Game</h2><p${_scopeId3}>${ssrInterpolate(_ctx.$t("program-in-short"))}</p>`);
                         _push4(ssrRenderComponent(_component_nuxt_link, {
                           to: unref(localePath)({ name: "program" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
@@ -285,7 +285,7 @@ const _sfc_main = {
                             createVNode("p", null, toDisplayString(_ctx.$t("program-in-short")), 1),
                             createVNode(_component_nuxt_link, {
                               to: unref(localePath)({ name: "program" }),
-                              class: "btn btn-common"
+                              class: "btn-common"
                             }, {
                               default: withCtx(() => [
                                 createTextVNode("Link")
@@ -310,7 +310,7 @@ const _sfc_main = {
                         _push4(`<div class="single-service"${_scopeId3}><div data-aos="fade-up" data-aos-duration="500" data-aos-delay="90"${_scopeId3}><img${ssrRenderAttr("src", _imports_6)} alt=""${_scopeId3}></div><h2${_scopeId3}>Web</h2><p${_scopeId3}>${ssrInterpolate(_ctx.$t("web-in-short"))}</p>`);
                         _push4(ssrRenderComponent(_component_nuxt_link, {
                           to: unref(localePath)({ name: "web" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx((_4, _push5, _parent5, _scopeId4) => {
                             if (_push5) {
@@ -341,7 +341,7 @@ const _sfc_main = {
                             createVNode("p", null, toDisplayString(_ctx.$t("web-in-short")), 1),
                             createVNode(_component_nuxt_link, {
                               to: unref(localePath)({ name: "web" }),
-                              class: "btn btn-common"
+                              class: "btn-common"
                             }, {
                               default: withCtx(() => [
                                 createTextVNode("Link")
@@ -379,7 +379,7 @@ const _sfc_main = {
                           createVNode("p", null, toDisplayString(_ctx.$t("art-in-short")), 1),
                           createVNode(_component_nuxt_link, {
                             to: unref(localePath)({ name: "gallery" }),
-                            class: "btn btn-common"
+                            class: "btn-common"
                           }, {
                             default: withCtx(() => [
                               createTextVNode("Link")
@@ -413,7 +413,7 @@ const _sfc_main = {
                           createVNode("p", null, toDisplayString(_ctx.$t("program-in-short")), 1),
                           createVNode(_component_nuxt_link, {
                             to: unref(localePath)({ name: "program" }),
-                            class: "btn btn-common"
+                            class: "btn-common"
                           }, {
                             default: withCtx(() => [
                               createTextVNode("Link")
@@ -447,7 +447,7 @@ const _sfc_main = {
                           createVNode("p", null, toDisplayString(_ctx.$t("web-in-short")), 1),
                           createVNode(_component_nuxt_link, {
                             to: unref(localePath)({ name: "web" }),
-                            class: "btn btn-common"
+                            class: "btn-common"
                           }, {
                             default: withCtx(() => [
                               createTextVNode("Link")
@@ -490,7 +490,7 @@ const _sfc_main = {
                         createVNode("p", null, toDisplayString(_ctx.$t("art-in-short")), 1),
                         createVNode(_component_nuxt_link, {
                           to: unref(localePath)({ name: "gallery" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx(() => [
                             createTextVNode("Link")
@@ -524,7 +524,7 @@ const _sfc_main = {
                         createVNode("p", null, toDisplayString(_ctx.$t("program-in-short")), 1),
                         createVNode(_component_nuxt_link, {
                           to: unref(localePath)({ name: "program" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx(() => [
                             createTextVNode("Link")
@@ -558,7 +558,7 @@ const _sfc_main = {
                         createVNode("p", null, toDisplayString(_ctx.$t("web-in-short")), 1),
                         createVNode(_component_nuxt_link, {
                           to: unref(localePath)({ name: "web" }),
-                          class: "btn btn-common"
+                          class: "btn-common"
                         }, {
                           default: withCtx(() => [
                             createTextVNode("Link")

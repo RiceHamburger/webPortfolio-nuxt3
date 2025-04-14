@@ -72,7 +72,7 @@ function createHead(options = {}) {
   return head;
 }
 
-const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"}],"style":[],"script":[],"noscript":[],"title":"NO-DATA","htmlAttrs":{"lang":"en"}};
+const appHead = {"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"}],"link":[{"rel":"icon","type":"image/x-icon","href":"/favicon.ico"},{"rel":"stylesheet","href":"/css/bootstrap.css"},{"rel":"stylesheet","href":"/css/style.css"},{"rel":"stylesheet","href":"/css/animate.min.css"},{"rel":"stylesheet","href":"/css/responsive.css"}],"style":[],"script":[],"noscript":[],"title":"NO-DATA","htmlAttrs":{"lang":"en"}};
 
 const appRootTag = "div";
 

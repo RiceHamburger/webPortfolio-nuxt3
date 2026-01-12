@@ -1,4 +1,4 @@
-const API_BASE = "http://api.no-data.tw/api";
+const API_BASE = "/api";
 
 export const apiGetWebData = () => useFetch(`${API_BASE}/webDev`);
 export const apiGetGalleryData = () => useFetch(`${API_BASE}/gallery`);

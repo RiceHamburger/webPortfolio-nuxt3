@@ -6,7 +6,7 @@
         <BCol sm="12">
           <div class="copyright-text text-center">
             <p>
-              &copy; NO-DATA 2016-2025. Crafted by
+              &copy; NO-DATA 2016-2026. Crafted by
               <a href="mailto:x79330@gmail.com">Louise</a>
             </p>
           </div>

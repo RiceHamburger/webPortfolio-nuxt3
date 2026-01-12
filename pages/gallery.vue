@@ -57,7 +57,7 @@ try {
     title: item.title,
     img: item.img,
     img_s: item.img_s,
-    tags: JSON.parse(item.tags),
+    tags: item.tags,
   }));
 
   await nextTick();

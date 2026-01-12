@@ -23,14 +23,14 @@ try {
       title: element.title,
       create_time: element.create_time,
       description: element.description,
-      in_charge: JSON.parse(element.in_charge),
+      in_charge: element.in_charge,
       tools: element.tools,
       video: element.video,
       main_img: element.main_img,
     };
 
     // imgs 分段
-    const imgsArray = JSON.parse(element.imgs);
+    const imgsArray = element.imgs;
     const num = 4;
     const newImgsArray = [];
     for (let i = 0; i < imgsArray.length; i += num) {

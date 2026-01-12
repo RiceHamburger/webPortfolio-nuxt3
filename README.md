@@ -2,9 +2,9 @@
 
 ## Build Setup
 
-## node 18.20.4
+## node v22.21.1
 
-## npm 10.7.0
+## npm v10.9.4
 
 ```bash
 # install dependencies

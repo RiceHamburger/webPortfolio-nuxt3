@@ -3,7 +3,7 @@ import { getSupabase } from "./supabase.js";
 export default async function handler(req, res) {
   const supabase = getSupabase();
   const { data, error } = await supabase
-    .from("galleries")
+    .from("projects")
     .select("*")
     .order("id", { ascending: false });
 

@@ -1,6 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
-export const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_ANON_KEY
-);
+export function getSupabase() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_ANON_KEY;
+
+  if (!url) throw new Error("Missing env: SUPABASE_URL");
+  if (!key) throw new Error("Missing env: SUPABASE_ANON_KEY");
+
+  return createClient(url, key);
+}

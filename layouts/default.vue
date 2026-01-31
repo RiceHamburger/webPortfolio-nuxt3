@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { Analytics } from "@vercel/analytics/nuxt";
+</script>
 
 <template>
   <div>
@@ -8,6 +10,7 @@
     </main>
     <Footer></Footer>
     <PageTopBtn></PageTopBtn>
+    <Analytics />
   </div>
 </template>
 

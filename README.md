@@ -2,7 +2,7 @@
 
 ## Build Setup
 
-## node v22.21.1
+## node v22.22.0
 
 ## npm v10.9.4
 

@@ -1,4 +1,3 @@
-import path from "path";
 export default defineNuxtConfig({
   app: {
     head: {
@@ -32,14 +31,12 @@ export default defineNuxtConfig({
       { code: "ja", file: "jp.json" },
     ],
     defaultLocale: "ja",
-    lazy: true,
-    langDir: path.resolve("./locales"),
+    langDir: "locales",
   },
   devtools: { enabled: true },
-  vite: {
-    define: {
-      "process.env.DEBUG": false,
-    },
+  runtimeConfig: {
+    supabaseUrl: process.env.SUPABASE_URL ?? "",
+    rsupabaseAnonKey: process.env.SUPABASE_ANON_KEY ?? "",
   },
   compatibilityDate: "2025-04-14",
 });

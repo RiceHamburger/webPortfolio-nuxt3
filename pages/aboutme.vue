@@ -23,15 +23,8 @@ const pageTitle = ref("About Me");
                 <h3 class="top-zero">SKILLS</h3>
                 <p>
                   HTML5 / CSS3(SCSS) / PHP / JavaScript(TypeScript) / JQuery /
-                  React.js / Vue.js / Next.js / Nuxt.js / Flash / Photoshop /
-                  Illustrator / After Effects / Unity3D / Action Script3.0 / C /
-                  C++ / C#
-                </p>
-                <h3 class="top-zero">CONTACT</h3>
-                <p>
-                  <span>{{ $t("contact-info") }}</span>
-                  <br /><br />
-                  x79330@gmail.com
+                  React.js / Vue.js / Next.js / Nuxt.js / AWS / Photoshop /
+                  Illustrator / After Effects / Unity3D / C / C++ / C#
                 </p>
               </b-col>
             </b-row>

@@ -2,13 +2,13 @@
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { apiGetGalleryData } from "~/composables/api";
-import Isotope from "isotope-layout";
 
 useHead({
   title: "Gallery | NO-DATA",
 });
 const pageTitle = ref("Gallery");
-let iso = null;
+const gridRef = ref(null);
+const iso = ref(null);
 
 const filter = (slug) => {
   const buttons = document.querySelectorAll(".portfolio-filter button");
@@ -23,12 +23,48 @@ const filter = (slug) => {
     }
   });
 
-  if (iso) {
-    iso.arrange({ filter: slug });
+  if (iso.value && iso.value.arrange) {
+    try {
+      iso.value.arrange({ filter: slug });
+    } catch (err) {
+      console.error("Isotope 過濾失敗：", err);
+    }
+  } else {
+    console.warn("Isotope 實例未初始化");
   }
 };
 
-onMounted(() => {
+const initIsotope = async () => {
+  if (!gridRef.value) return;
+  if (iso.value) return;
+
+  try {
+    // 確保所有元素都已渲染
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
+    const mod = await import("isotope-layout");
+    const Isotope = mod.default;
+
+    // 獲取實際的 DOM 元素（Bootstrap Vue 組件需要 $el）
+    const gridElement = gridRef.value.$el || gridRef.value;
+
+    // 檢查元素是否存在
+    const items = gridElement.querySelectorAll(".portfolio-item");
+    if (items.length === 0) {
+      console.warn("找不到 portfolio-item 元素");
+      return;
+    }
+
+    iso.value = new Isotope(gridElement, {
+      itemSelector: ".portfolio-item",
+      layoutMode: "fitRows",
+    });
+  } catch (err) {
+    console.error("Isotope 初始化失敗：", err);
+  }
+};
+
+onMounted(async () => {
   Fancybox.bind('[data-fancybox="gallery"]', {
     Toolbar: {
       display: {
@@ -38,38 +74,34 @@ onMounted(() => {
       },
     },
   });
+
+  try {
+    const { data, error } = await apiGetGalleryData();
+
+    if (error.value) {
+      throw error.value;
+    }
+
+    galleries.value = (data.value || []).map((item) => ({
+      id: item.id,
+      title: item.title,
+      img: item.img,
+      img_s: item.img_s,
+      tags: item.tags,
+    }));
+
+    await nextTick();
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    await initIsotope();
+  } catch (err) {
+    console.error("API 或初始化錯誤：", err);
+  }
 });
 
 const galleries = ref([]);
 const classExtraction = (item) => {
   return item.tags.map((tag) => tag);
 };
-
-try {
-  const { data, error } = await apiGetGalleryData();
-
-  if (error.value) {
-    throw error.value;
-  }
-
-  galleries.value = (data.value || []).map((item) => ({
-    id: item.id,
-    title: item.title,
-    img: item.img,
-    img_s: item.img_s,
-    tags: item.tags,
-  }));
-
-  await nextTick();
-  setTimeout(() => {
-    iso = new Isotope(".portfolio-items", {
-      itemSelector: ".portfolio-item",
-      layoutMode: "fitRows",
-    });
-  }, 300);
-} catch (err) {
-  console.error("API 錯誤：", err);
-}
 </script>
 
 <template>
@@ -85,9 +117,8 @@ try {
             <li>
               <button
                 class="btn btn-primary"
-                href="#"
                 data-filter="*"
-                @click="filter('*')"
+                @click.prevent="filter('*')"
               >
                 All
               </button>
@@ -95,9 +126,8 @@ try {
             <li>
               <button
                 class="btn btn-default illustration"
-                href="#"
                 data-filter=".illustration"
-                @click="filter('.illustration')"
+                @click.prevent="filter('.illustration')"
               >
                 Illustration
               </button>
@@ -105,9 +135,8 @@ try {
             <li>
               <button
                 class="btn btn-default sketch"
-                href="#"
                 data-filter=".sketch"
-                @click="filter('.sketch')"
+                @click.prevent="filter('.sketch')"
               >
                 Sketch
               </button>
@@ -115,9 +144,8 @@ try {
             <li>
               <button
                 class="btn btn-default Original"
-                href="#"
                 data-filter=".Original"
-                @click="filter('.Original')"
+                @click.prevent="filter('.Original')"
               >
                 Original works
               </button>
@@ -125,16 +153,15 @@ try {
             <li>
               <button
                 class="btn btn-default Derivative"
-                href="#"
                 data-filter=".Derivative"
-                @click="filter('.Derivative')"
+                @click.prevent="filter('.Derivative')"
               >
                 Derivative works
               </button>
             </li>
           </ul>
 
-          <b-row class="portfolio-items">
+          <b-row ref="gridRef" class="portfolio-items">
             <b-col
               cols="6"
               sm="4"

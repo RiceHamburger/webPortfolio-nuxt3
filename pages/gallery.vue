@@ -39,16 +39,32 @@ const initIsotope = async () => {
   if (iso.value) return;
 
   try {
-    // 確保所有元素都已渲染
+    const gridElement = gridRef.value.$el || gridRef.value;
+
+    // 等待所有圖片加載完成
+    const images = gridElement.querySelectorAll(".portfolio-item img");
+    if (images.length === 0) {
+      console.warn("找不到圖片元素");
+      return;
+    }
+
+    const imageLoadPromises = Array.from(images).map((img) => {
+      return new Promise((resolve) => {
+        if (img.complete) {
+          resolve();
+        } else {
+          img.onload = () => resolve();
+          img.onerror = () => resolve(); // 圖片加載失敗也繼續
+        }
+      });
+    });
+
+    await Promise.all(imageLoadPromises);
     await new Promise((resolve) => setTimeout(resolve, 100));
 
     const mod = await import("isotope-layout");
     const Isotope = mod.default;
 
-    // 獲取實際的 DOM 元素（Bootstrap Vue 組件需要 $el）
-    const gridElement = gridRef.value.$el || gridRef.value;
-
-    // 檢查元素是否存在
     const items = gridElement.querySelectorAll(".portfolio-item");
     if (items.length === 0) {
       console.warn("找不到 portfolio-item 元素");
@@ -76,13 +92,13 @@ onMounted(async () => {
   });
 
   try {
-    const { data, error } = await apiGetGalleryData();
+    const data = await apiGetGalleryData();
 
-    if (error.value) {
-      throw error.value;
+    if (!data || !Array.isArray(data)) {
+      throw new Error("無效的數據格式");
     }
 
-    galleries.value = (data.value || []).map((item) => ({
+    galleries.value = data.map((item) => ({
       id: item.id,
       title: item.title,
       img: item.img,
@@ -91,7 +107,6 @@ onMounted(async () => {
     }));
 
     await nextTick();
-    await new Promise((resolve) => setTimeout(resolve, 150));
     await initIsotope();
   } catch (err) {
     console.error("API 或初始化錯誤：", err);

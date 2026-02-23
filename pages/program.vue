@@ -7,17 +7,13 @@ const pageTitle = ref("Project");
 const projects = ref([]);
 
 try {
-  const { data, error } = await apiGetProjectData();
+  const data = await apiGetProjectData();
 
-  if (error.value) {
-    console.error("API 錯誤：", error.value);
+  if (!Array.isArray(data)) {
+    console.error("資料格式錯誤：", data);
   }
 
-  if (!Array.isArray(data.value)) {
-    console.error("資料格式錯誤：", data.value);
-  }
-
-  const resetProjectsArray = data.value.map((element) => {
+  const resetProjectsArray = data.map((element) => {
     const project = {
       id: element.id,
       title: element.title,

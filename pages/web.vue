@@ -7,15 +7,15 @@ const pageTitle = ref("Front-End Development");
 const webs = ref([[], [], []]);
 
 try {
-  const { data, error } = await apiGetWebData();
+  const data = await apiGetWebData();
 
-  if (error.value) {
-    throw error.value;
+  if (!Array.isArray(data)) {
+    throw new Error("無效的資料格式");
   }
 
   const result = [[], [], []];
 
-  data.value.forEach((element, index) => {
+  data.forEach((element, index) => {
     const groupIndex = index % 3;
     const webData = {
       id: element.id,
